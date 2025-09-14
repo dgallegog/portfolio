@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Enterprise Identity & Access Management Tool",
     description: "Comprehensive authentication and password reset platform with React front-end, .NET Azure Functions, SMS/email notifications, and Kubernetes-based API orchestration.",
-    image: "/projects/project1.png",
+    image:  "/projects/project1.png",
     tags: ["React", ".Net", "Azure", "Kubernetes"],
     demoUrl: "#",
     githubUrl: "#",
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src={project.image}
+                  src={import.meta.env.BASE_URL + project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
