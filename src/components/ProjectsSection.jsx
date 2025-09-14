@@ -1,7 +1,7 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
-  {
+  { 
     id: 1,
     title: "Enterprise Identity & Access Management Tool",
     description: "Comprehensive authentication and password reset platform with React front-end, .NET Azure Functions, SMS/email notifications, and Kubernetes-based API orchestration.",
