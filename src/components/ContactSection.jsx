@@ -16,10 +16,35 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
+  try {
+    const form = new FormData(e.currentTarget);
+
+    // ====== OPCIÓN A: Web3Forms ======
+    // form.append("access_key", "TU_ACCESS_KEY_WEB3FORMS"); // <-- descomenta si usas Web3Forms
+    // const endpoint = "https://api.web3forms.com/submit";
+    // const fetchOptions = { method: "POST", body: form };
+
+    // ====== OPCIÓN B: Formspree ======
+    // const endpoint = "https://formspree.io/f/TU_ID";
+    // const fetchOptions = { method: "POST", headers: { Accept: "application/json" }, body: form };
+
+    // >>> Elige UNA de las dos opciones de arriba y comenta la otra <<<
+    // (para el ejemplo vamos con Web3Forms:)
+    form.append("access_key", "042d915e-5478-4dd1-a09c-7504205186ed"); 
+    const endpoint = "https://api.web3forms.com/submit";
+    const fetchOptions = { method: "POST", body: form };
+
+    const res = await fetch(endpoint, fetchOptions);
+
+  }
+  catch{
+
+  }
+
+  
 
     setTimeout(() => {
       toast({
@@ -102,11 +127,11 @@ export const ContactSection = () => {
 
           <div
             className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
+            
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
