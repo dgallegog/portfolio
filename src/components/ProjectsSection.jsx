@@ -3,30 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Enterprise Identity & Access Management Tool",
+    description: "Comprehensive authentication and password reset platform with React front-end, .NET Azure Functions, SMS/email notifications, and Kubernetes-based API orchestration.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    tags: ["React", ".Net", "Azure", "Kubernetes"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Automated Data Integration & Reporting Service",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "Distributed .NET service that consumes business events from Kafka, processes and enriches data in Azure, and stores the results in a relational database for real-time analytics and reporting.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["Kafka", ".Net", "Azure", "Kubernetes","SQL"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Dynamics 365 Data Integration Service",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      ".NET microservice that consumes events from Kafka, processes customer and sales data, and syncs them with Dynamics 365 CRM in real time.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["Dynamics 366", ".Net", "Kafka"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -42,8 +42,12 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          These projects were developed with a 
+          strong focus on scalability, 
+          reliability, and business impact.
+          Each solution was designed to meet 
+          real-world requirements, ensuring performance, 
+          maintainability, and long-term value.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,20 +79,8 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+
+
                   </div>
                 </div>
               </div>
@@ -96,15 +88,7 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/machadop1407"
-          >
-            Check My Github <ArrowRight size={16} />
-          </a>
-        </div>
+
       </div>
     </section>
   );
