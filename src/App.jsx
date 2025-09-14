@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Toaster />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter >
         <Routes>
           <Route index element={<Home />} />
           <Route path="*" element={<NotFound />} />
